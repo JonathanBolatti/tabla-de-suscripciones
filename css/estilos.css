@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsla(0, 3%, 28%, 0.897);
+    font-family: Verdana;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*si los elementos se ven muy apretados, uno de ellos se baja*/
+    flex-wrap: wrap;
+}
+
+.tabla {
+    width: 30%;
+    height: 475px;
+    margin: auto;
+    border: 2px solid #80ff00ad;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #80ff00ad;
+    padding: 60px;
+    text-align: center;
+    /* flex-grow: 1; => esta sentencia elimina los espacios entre tablas */
+}
+
+.tabla>h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.tabla img {
+    width: 64px;
+    margin-bottom: 35px;
+}
+
+.tabla>h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tabla>p {
+    display: block;
+    margin-bottom: 45px;
+}
+
+.boton {
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    background: #80ff00ad;
+    text-decoration: none;
+    color: #000;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.tabla:hover {
+    background: #081de04d;
+    color: #80ff00ad;
+    transition: 0.5s all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .tabla {
+        width: 45%;
+        max-width: none;
+        margin-bottom: 40px;
+        flex-grow: initial;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .tabla {
+        width: 45%;
+       padding: 30px;
+    }
+    .tabla>h2{
+        margin-top: 40px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .tabla {
+        width: 85%;
+        padding: 20px; 
+       
+    }
+}
